@@ -1,0 +1,5 @@
+{
+	"OL-E 001": "Error occured when executing redis command to create new bucket",
+	"OL-E 002": "Redis client is not connected",
+	"OL-E 003": "Error occured when executing redis command to retrieve bucket"
+}

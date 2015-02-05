@@ -1,6 +1,6 @@
 {
   "name": "oniyi-limiter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A limiter/throttling implementation in redis",
   "author": {
     "name": "Benjamin Kroeger",
@@ -9,7 +9,8 @@
   "repository": "benkroeger/oniyi-limiter",
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "./errors"
   ],
   "keywords": [
     "oniyi-limiter",

@@ -1,10 +1,10 @@
 var messages = require('./messages.json');
 
 function LimiterError (code, limiterId, error) {
-	// @TODO: might be slow, need to investigate
-	if (typeof error === 'string') {
-		error = new Error(error);
-	}
+  // @TODO: might be slow, need to investigate
+  if (typeof error === 'string') {
+    error = new Error(error);
+  }
   Error.call(this, error.message);
   this.name = "LimiterError";
   this.message = messages[code] || 'Unknown Error Message for code { ' + code + ' }';

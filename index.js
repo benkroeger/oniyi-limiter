@@ -221,6 +221,7 @@ OniyiLimiter.prototype.getBucket = function(callback) {
 				return deferred.resolve(self.createBucket(callback));
 			}
 
+
 			// no "remaining" left
 			if (res[0] < 0) {
 				logDebug('{%s} - Bucket limit {%d} reached, remaining calls in this period {%d}', self.id, res[1][1], 0);
@@ -236,7 +237,7 @@ OniyiLimiter.prototype.getBucket = function(callback) {
 
 			logDebug('{%s} - Bucket loaded from redis: remaining {%s}; limit {%s}, reset {%s}', self.id, res[0], res[1][1], new Date(parseInt(res[1][2], null)));
 			bucket = {
-				remaining: -1,
+				remaining: res[0],
 				limit: res[1][1],
 				reset: res[1][2]
 			};

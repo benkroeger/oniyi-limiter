@@ -1,6 +1,6 @@
 {
   "name": "oniyi-limiter",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A limiter/throttling implementation in redis",
   "author": {
     "name": "Benjamin Kroeger",

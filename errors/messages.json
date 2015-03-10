@@ -1,5 +1,7 @@
 {
-	"OL-E 001": "Error occured when executing redis command to create new bucket",
+	"OL-E 001": "Error occured when creating new bucket",
 	"OL-E 002": "Redis client is not connected",
-	"OL-E 003": "Error occured when executing redis command to retrieve bucket"
+	"OL-E 003": "Error occured when executing redis command to retrieve bucket",
+	"OL-E 004": "Can not create new bucket, exists already!",
+	"OL-E 005": "Error occured when reading existing bucket"
 }

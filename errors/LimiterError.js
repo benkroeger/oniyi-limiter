@@ -1,19 +1,18 @@
-var messages = require('./messages.json');
+// This error is used to wrap general errors occuring in Oniyi-Limiter.
 
-function LimiterError (code, limiterId, error) {
-  // @TODO: might be slow, need to investigate
-  if (typeof error === 'string') {
-    error = new Error(error);
-  }
-  Error.call(this, error.message);
-  this.name = "LimiterError";
-  this.message = messages[code] || 'Unknown Error Message for code { ' + code + ' }';
-  this.code = code;
-  this.status = 500;
-  this.inner = error;
+'use strict';
+var util = require('util');
+
+function LimiterError (err, limiterId) {
+  Error.call(this);
+  // captureStackTrace is V8-only (node, chrome)
+  Error.captureStackTrace(this, LimiterError);
+
+  this.id = err.id;
+  this.name = 'LimiterError';
+  this.message = util.format('%s - %s', limiterId || 'anonymous limiter', err.message);
 }
 
-LimiterError.prototype = Object.create(Error.prototype);
-LimiterError.prototype.constructor = LimiterError;
+util.inherits(LimiterError, Error);
 
 module.exports = LimiterError;

@@ -20,9 +20,7 @@
     "redis"
   ],
   "dependencies": {
-    "debug": "^2.1.1",
-    "lodash": "^3.5.0",
-    "make-redis-client": "0.0.2",
+    "make-redis-client": "0.0.3",
     "q": "^1.1.2"
   },
   "devDependencies": {

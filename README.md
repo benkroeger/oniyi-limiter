@@ -1,4 +1,6 @@
-#  [![NPM version][npm-image]][npm-url] 
+[![NPM info](https://nodei.co/npm/oniyi-limiter.png?downloads=true)](https://nodei.co/npm/oniyi-limiter.png?downloads=true)
+
+[![dependencies](https://david-dm.org/benkroeger/oniyi-limiter.png)](https://david-dm.org/benkroeger/oniyi-limiter.png)
 
 > A limiter/throttling implementation in redis
 

@@ -122,7 +122,7 @@ promise.then(function(bucket){
 This method is deprecated as of version 0.0.9. Please use `throttle` instead.
 
 ## Debugging
-Set the environment variable `NODE_ENV` to a value that contains `oniyi-limiter` and it'll start talking to you.
+Set the environment variable `DEBUG` to a value that contains `oniyi-limiter` and it'll start talking to you.
 
 ## Future plans
 In order to support API transactions, it should be possible to request multiple tokens at once. This will allow to secure enough resources to complete a whole transaction... or postpone it to the next bucket if the number of available tokens isn't sufficient to complete the transaction.

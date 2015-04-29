@@ -28,6 +28,14 @@ myLimiter.throttle(function(err, bucket){
 	console.log('This call was throttled. My bucket now looks like this: %j', bucket);
 	// {remaining: 9, limit: 10, reset: 1425969050096}
 });
+
+// Alternatively with options:
+var myLimiter = new OniyiLimiter({
+	id: 'my-limiter',
+	limit: 2000,
+	duration: 180000
+});
+
 ```
 
 ## Methods
@@ -40,7 +48,7 @@ The first argument can be either a `id` or an `options` object. The only require
 * `limit` - the number of tokens available in a bucket per `duration` (defaults to `2500`). If `OniyiLimiter.throttle` is called more often than this number during the validity of one slingle bucket, a `BucketEmptyError` will be passed to the callback function.
 * `duration` - the number of milliseconds a bucket is valid (defaults to `60000`)
 * `useLocalFallback` - a true / false switch to indicate weather `OniyiLimiter` should use a local (in-memory) fallback for managing the bucket in case the redis client is not connected (defaults to `false`).
-* `redisClient` - an instance of the node [redis](https://www.npmjs.com/package/redis) client
+* `redisClient` - an instance of node [redis](https://www.npmjs.com/package/redis) client
 * `redis` - an object of options that can be passed to [make-redis-client](https://www.npmjs.com/package/make-redis-client) in order to create a redis client (defautls to `{}` and thus tries to connect to `localhost` on port `6379`).
 
 ### createBucket(callback)

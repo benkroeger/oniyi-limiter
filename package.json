@@ -20,7 +20,7 @@
     "redis"
   ],
   "dependencies": {
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "oniyi-logger": "1.0.0"
   },
   "devDependencies": {
